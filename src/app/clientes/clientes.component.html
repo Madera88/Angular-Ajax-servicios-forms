@@ -1,0 +1,39 @@
+<div class="container">
+    
+<!--<div *ngIf="user">
+    nombre de un usuario
+<h1>{{user[0].first_name}}</h1>
+</div>-->
+<h3 class="h3 text-center text-info">Clientes Satisfechos</h3>
+
+<div class="row">
+    <table class="col table table-striped">
+        <thead class="bg-info">
+            <tr class="text-center">
+                <th> Foto </th>
+                <th> Nombre</th>
+                <th>Apellidos</th>
+                <th> Email </th>
+                <th> Nota </th>
+            </tr>
+        </thead>
+        <tbody>            
+            <tr class="text-center" *ngFor="let usuario of user">
+                    <td><img src="{{usuario.avatar}}" width="60px"></td>
+                    <td> {{usuario.first_name}}</td>
+                    <td> {{usuario.last_name}}</td>
+                    <td> {{usuario.email}}</td>
+                    <td><img src="https://media.istockphoto.com/vectors/five-yellow-stars-customer-product-rating-icon-fow-web-applications-vector-id1140391316"  alt="5 estrellas"width="80px"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<h6> Nota: Peticion Ajax a -> https://reqres.in/api/users?page=2</h6>
+
+
+
+
+</div>
+
+

@@ -1,0 +1,12 @@
+<main class="container ">
+    <div class="row">
+        <section class="col-6">
+            <app-mensajes
+           [posts]="posts"></app-mensajes>
+        </section>
+        <section class="col-6 ">
+            <app-escribir
+            (postear)="Enviarpost($event)"></app-escribir>
+        </section>
+    </div>
+</main>

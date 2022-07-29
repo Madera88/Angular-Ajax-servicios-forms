@@ -1,0 +1,19 @@
+<main class="row">
+    <div class="col border p-5 m-3">
+        <form >
+            <div class="form-floating mb-3">
+                <input type="user" name="user" id="user" class="form-control" placeholder="Indique su nickname" [(ngModel)]="user">
+                <label for="user">Indique su nickname</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="mensaje" name="mensaje" id="mensaje" class="form-control" placeholder="Indique su mensaje" [(ngModel)]="mensaje">
+                <label for="mensaje">Indique su mensaje</label>
+            </div>
+            <div class=" d-flex justify-content-between">
+                <button type="reset" class="btn btn-danger ms-3" >Limpiar</button>
+                <button type="submit" class="btn btn-primary me-3" (click)="comentar()">comentar</button>
+            </div>
+        </form>
+    </div>
+</main>

@@ -1,0 +1,32 @@
+<section class="row">
+    <div class="col">
+        <table class="table table-striped ">
+            <thead> 
+                <tr class="text-center">
+                    <th> Marca</th>
+                    <th> Modelo</th>
+                    <th> Km</th>
+                    <th> Precio</th>
+                    <th> Accion </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let coche of coches; let i = index" class="text-center">
+                    <td>{{coche.marca | uppercase}}</td>
+                    <td>{{coche.modelo | uppercase}}</td>
+                    <td>{{coche.km  }}</td>
+                    <div *ngIf="coche.precio<5000; then oferta else normal"></div>
+                    <ng-template #oferta>
+                        <td class="bg-success text-white" >{{coche.precio | currency:"€"}} <br><span>Oferta!</span></td>
+                    </ng-template>
+                    <ng-template #normal>
+                        <td >{{coche.precio | currency:"€"}}</td>
+                    </ng-template>
+                    <td> <button class="btn btn-primary" (click)="comprar(i)"> Comprar</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</section>
+

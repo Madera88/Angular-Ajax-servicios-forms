@@ -1,0 +1,11 @@
+<main class="row">
+    <section class="col border p-5 m-3">
+        <div *ngFor="let mensaje of posts">
+            <p> 
+             El usuario <span class="bg-warning"><b>{{mensaje.user}}</b></span> dice: <br>
+            {{mensaje.mensaje}}</p>
+            <hr>
+        </div>
+
+    </section>
+</main>

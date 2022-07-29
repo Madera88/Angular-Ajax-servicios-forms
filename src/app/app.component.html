@@ -1,0 +1,28 @@
+<header class="container">
+  <div class="row">
+    <div class="col ">
+      <h1 class="text-center text-white bg-dark mb-0">{{ title }}</h1>
+      <div class="col-12 bg-dark mt-0 ">
+        <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-around">
+          <ul class="navbar-nav mr-auto ">
+            <li class="nav-item active ms-2 me-5 ms-5">
+              <a class="nav-link color-white" routerLink="">Venta</a>
+            </li>
+            <li class="nav-item ms-2 me-5 ms-5">
+              <a class="nav-link" routerLink="/foro">Foro</a>
+            </li>
+            <li class="nav-item ms-2 me-5 ms-5">
+              <a class="nav-link" routerLink="/clientes">Clientes</a>
+            </li>
+            <li class="nav-item ms-2 me-5 ms-5">
+              <a class="nav-link" routerLink="/contacto">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

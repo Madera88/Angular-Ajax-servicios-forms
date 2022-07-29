@@ -1,0 +1,43 @@
+<form class="row border-start" #valido="ngForm">
+    <fieldset class="col">
+        <legend class="text-center text-primary"> Vende tu coche</legend>
+
+        <div class="form-floating mb-3">
+           <!--<input type="text" name="marca" id="marca" class="form-control" placeholder="Indicar Marca" [(ngModel)]="marca">
+            <label for="marca">Indicar Marca</label>-->
+            <div class="form-floating mb-3">
+                <select name="marca" id="marca"   class="form-select" [(ngModel)]="marca" required>
+                   
+                    <option value="citroen">Citroen</option>
+                    <option value="renault">Renault</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="bmw">BMW</option>
+                </select>
+                <label for="marca">Selecciona una marca</label>
+            </div>
+            
+        </div>
+        
+        <div class="form-floating mb-3">
+            <input type="text" name="modelo" id="modelo" class="form-control" placeholder="Indicar Modelo" [(ngModel)]="modelo" required>
+            <label for="nombre">Indicar Modelo</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="number" min="0" name="km" id="km" class="form-control" placeholder="km" [(ngModel)]="km" required>
+            <label for="km">km</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="number" min="501" name="precio" id="precio" class="form-control" placeholder="Indicar el Precio" required [(ngModel)]="precio" >
+            <label for="precio">Indicar el Precio</label>
+            <span  *ngIf="precio<4000 && valido.controls['precio'].touched"> <p class="bg-success text-center">Precio considerado Oferta</p></span>
+        </div>
+
+        <div class=" d-flex justify-content-between">
+            <button type="reset" class="btn btn-danger ms-3" >Limpiar</button>
+            <button type="submit" class="btn btn-primary me-3" (click)="valido.form.valid && vender()">Añadir coche</button>
+        </div>
+       
+    </fieldset>
+</form>
+<script></script>

@@ -1,0 +1,14 @@
+<main class="container">
+  <div class="row">
+    <section class="col-8 mt-3">
+      <app-comprar 
+      [coches]="coches"
+      (IndiceCompra)="CompraCoche($event)"
+      ></app-comprar>
+    </section>
+    <aside class="col-4 mt-3">
+      <app-vender
+      (cocheVenta)="incluirlistato($event)"></app-vender>
+    </aside>
+  </div>
+</main>
